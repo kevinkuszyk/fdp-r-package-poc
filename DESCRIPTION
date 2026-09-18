@@ -1,0 +1,11 @@
+Package: helloWorld
+Type: Package
+Title: Proof of Concept R Package for FDP
+Version: 0.1.0
+Authors@R: person("Kevin", "Kuszyk", role = c("aut", "cre"), email = "kevin.kuszyk@dhsc.gov.uk")
+Author: Kevin Kuszyk
+Maintainer: Kevin Kuszyk <kevin.kuszyk@dhsc.gov.uk>
+Description: A minimal R package used to prove out packaging with conda and GitHub Actions.
+License: MIT
+Encoding: UTF-8
+RoxygenNote: 7.3.2
