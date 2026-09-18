@@ -18,8 +18,7 @@ jobs:
         uses: conda-incubator/setup-miniconda@v3
         with:
           miniforge-version: latest
-          activate-environment: build
-          auto-activate-base: false
+          auto-activate-base: true
 
       - name: Install conda-build
         run: conda install --yes conda-build
