@@ -12,13 +12,13 @@ jobs:
         shell: bash -el {0}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Conda
-        uses: conda-incubator/setup-miniconda@v3
+        uses: conda-incubator/setup-miniconda@v4
         with:
           miniforge-version: latest
-          auto-activate-base: true
+          auto-activate: true
 
       - name: Install conda-build
         run: conda install --yes -n base conda-build
@@ -27,7 +27,7 @@ jobs:
         run: conda build conda.recipe --output-folder dist
 
       - name: Upload package
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: conda-package
           path: dist/noarch/*.conda
