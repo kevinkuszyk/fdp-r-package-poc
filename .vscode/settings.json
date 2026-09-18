@@ -1,0 +1,12 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "R": true,
+        "conda": true,
+        "command": true,
+        "actionlint": true,
+        "/^git diff --check && if command -v actionlint >/dev/null 2>&1; then actionlint \\.github/workflows/build\\.yml; else ruby -e \"require 'yaml'; YAML\\.load_file\\('\\.github/workflows/build\\.yml'\\); puts 'YAML parsed successfully'\"; fi$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
