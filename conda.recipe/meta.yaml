@@ -1,0 +1,27 @@
+{% set version = "0.1.0" %}
+
+package:
+  name: r-hello-world
+  version: {{ version }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+  noarch: generic
+
+requirements:
+  host:
+    - r-base >=4.0
+  run:
+    - r-base >=4.0
+
+test:
+  commands:
+    - $R -e "library('helloWorld'); stopifnot(identical(hello_world(), 'Hello, world!'))"
+
+about:
+  home: https://github.com/dhsc-govuk-internal/fdp-r-package-poc
+  license: MIT
+  summary: Proof-of-concept R package for conda and GitHub Actions.

@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# R
+..Rcheck/
+
+# MacOS
+.DS_Store
